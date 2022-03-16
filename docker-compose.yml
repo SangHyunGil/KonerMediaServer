@@ -25,12 +25,3 @@ services:
       - "./janus/janus.eventhandler.sampleevh.jcfg:/usr/local/etc/janus/janus.eventhandler.sampleevh.jcfg"
       - "./janus/janus.transport.http.jcfg:/usr/local/etc/janus/janus.transport.http.jcfg"
     restart: always
-
-  web_server:
-    user: "root"
-    image: httpd:alpine
-    restart: always
-    ports:
-        - 80:80
-    volumes:
-        - ./html:/usr/local/apache2/htdocs
